@@ -15,11 +15,10 @@
             public $name;
             public $price;
             // メソッドを定義
-            public function show_price(int $price)
+            public function show_price()
             {
-                $this->price = $price;
+                // $this->price = $price;
             }
-
             // コンストラクタを定義
             public function __construct(string $name, int $price)
             {
@@ -27,16 +26,15 @@
                 $this->price = $price;
             }
         }
-
         class Animal
         {
             public $name;
             public $height;
             public $weight;
             // メソッドを定義
-            public function show_height(int $height)
+            public function show_height()
             {
-                $this->height = $height;
+                // $this->height = $height;
             }
             // コンストラクタを定義
             public function __construct(string $name, int $height, int $weight)
@@ -46,19 +44,21 @@
                 $this->weight = $weight;
             }
         }
-
         // インスタンス化する
-        $kadai_016 = new Food('カレー', 360);
-        $kadai_016_2 = new Animal('猫', 50, 100);
+        $kadai_016 = new Food('カレー',360);
+        $kadai_016_2 = new Animal('猫',50,100);
+
+
+        // メソッドにアクセスして実行する
+        $kadai_016->show_price(360);
+        $kadai_016_2->show_height(50);
+
 
         //インスタンスの各プロパティの値を出力する
         print_r($kadai_016);
         echo '<br>';
         print_r($kadai_016_2);
 
-        // メソッドにアクセスして実行する
-        $kadai_016->show_price(360);
-        $kadai_016_2->show_height(50);
         ?>
     </p>
 </body>
