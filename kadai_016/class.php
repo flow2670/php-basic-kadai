@@ -17,7 +17,7 @@
             // メソッドを定義
             public function show_price()
             {
-               return $this->price;
+                echo $this->price;
             }
             // コンストラクタを定義
             public function __construct(string $name, int $price)
@@ -34,7 +34,7 @@
             // メソッドを定義
             public function show_height()
             {
-               return $this->height;
+                echo $this->height;
             }
             // コンストラクタを定義
             public function __construct(string $name, int $height, int $weight)
@@ -45,23 +45,20 @@
             }
         }
         // インスタンス化する
-        $kadai_016 = new Food('カレー',360);
-        $kadai_016_2 = new Animal('猫',50,100);
-
-
-        // メソッドにアクセスして実行、結果を出力する
-        echo 'Food Price: ' . $kadai_016->show_price();
-        echo '<br>';
-        echo 'Animal Height: ' . $kadai_016_2->show_height();
-        echo '<br>';
+        $kadai_016 = new Food('カレー', 360);
+        $kadai_016_2 = new Animal('猫', 50, 100);
 
         //インスタンスの各プロパティの値を出力する
         print_r($kadai_016);
         echo '<br>';
         print_r($kadai_016_2);
+        echo '<br>';
 
+        // メソッドにアクセスして実行
+        $kadai_016->show_price();
+        echo '<br>';
+        $kadai_016_2->show_height();
         ?>
     </p>
 </body>
-
 </html>
